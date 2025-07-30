@@ -16,9 +16,9 @@ def consultar_dados(cpf: str = Query(..., description="Digite o CPF sem pontos o
     dados = resultado[[
         'Consumo',
         'Geração',
-        'Crédito_aplicado',
+        'Credito',
         'Fatura',
-        'Saldo de crédito'
+        'Saldo'
     ]].to_dict(orient="records")
     
     return {"cpf": cpf, "dados": dados}
