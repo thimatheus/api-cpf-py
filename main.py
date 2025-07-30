@@ -14,10 +14,10 @@ def consultar_dados(cpf: str = Query(..., description="Digite o CPF sem pontos o
         return {"erro": "CPF não encontrado"}
     
     dados = resultado[[
-        'Consumo (kWh)',
-        'Geração (kWh)',
-        'Crédito aplicado (kWh)',
-        'Fatura R$',
+        'Consumo',
+        'Geração',
+        'Crédito_aplicado',
+        'Fatura',
         'Saldo de crédito'
     ]].to_dict(orient="records")
     
